@@ -6,12 +6,20 @@
  * returns the consonants in uppercase form.
  * 
  * Attributions:
+ * The isEnglishVowel method was created by Eric
+ * Roberts' text 'The art and science of java' pg.
+ * 263.
  */
 
 import acm.program.*;
+import java.util.*;
 
 public class CS106A_ConsonantDetector extends ConsoleProgram
 {
+	/** Named constnts */
+	private static final String 
+	DELIMITERS = "!@#$%^&*()_-+={[}]:;\"'<,>.?/~`/\\ ";
+	
 	public void run()
 	{
 		println("This program takes a string and returns" +
@@ -24,12 +32,33 @@ public class CS106A_ConsonantDetector extends ConsoleProgram
 	private String findConsonants(String str)
 	{
 		//find tokens (word units)
+		StringTokenizer tokenizedStr = new StringTokenizer(
+				str.toUpperCase(), DELIMITERS, true	
+		);
 		String result = "";
-		String comparator = str.toLowerCase();
+		while(tokenizedStr.hasMoreTokens()){
+			
+			println(tokenizedStr.nextToken());
+			//result += tokenizedStr.nextToken();
+		}
 		
-		return "".toUpperCase();
+		return result;
 	}
 	
 	
-	private boolean
+	private boolean isWord(String str)
+	{
+		return true;
+	}
+	
+	
+	private boolean isEnglishVowel(char ch)
+	{
+		switch (Character.toLowerCase(ch)) {
+			case 'a': case 'e': case 'i': case 'o': case 'u':
+				return true;
+			default: 
+					return false;
+		}
+	}
 }
