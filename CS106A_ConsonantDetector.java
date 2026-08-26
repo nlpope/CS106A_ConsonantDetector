@@ -58,7 +58,7 @@ public class CS106A_ConsonantDetector extends ConsoleProgram
 			case 'a': case 'e': case 'i': case 'o': case 'u':
 				return false;
 			default: 
-					return false;
+					return true;
 		}
 	}
 }
