@@ -52,11 +52,11 @@ public class CS106A_ConsonantDetector extends ConsoleProgram
 	}
 	
 	
-	private boolean isEnglishVowel(char ch)
+	private boolean isEnglishConsonant(char ch)
 	{
 		switch (Character.toLowerCase(ch)) {
 			case 'a': case 'e': case 'i': case 'o': case 'u':
-				return true;
+				return false;
 			default: 
 					return false;
 		}
