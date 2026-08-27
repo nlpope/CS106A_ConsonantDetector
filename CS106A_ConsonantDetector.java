@@ -6,7 +6,7 @@
  * returns the consonants in uppercase form.
  * 
  * Attributions:
- * The isEnglishVowel method was created by Eric
+ * The isEnglishConsonant method was adapted from Eric
  * Roberts' text 'The art and science of java' pg.
  * 263.
  */
